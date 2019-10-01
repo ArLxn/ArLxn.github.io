@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>泠泫凝的异次元空间</title>
+  
+  <subtitle>Designed by Lxn</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://arlxn.xyz/"/>
+  <updated>2019-10-01T10:35:44.239Z</updated>
+  <id>https://arlxn.xyz/</id>
+  
+  <author>
+    <name>泠泫凝</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019，中国七十岁生日快乐！</title>
+    <link href="https://arlxn.xyz/19chinagq.html"/>
+    <id>https://arlxn.xyz/19chinagq.html</id>
+    <published>2019-10-01T10:31:52.903Z</published>
+    <updated>2019-10-01T10:35:44.239Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是2019年10月1日，伟大的中华人民共和国70周年华诞。</p><p>中国人民是伟大的人民，</p><p>中华民族是伟大的民族，</p><p>中华文明是伟大的文明。</p><p>历史照亮未来，征程未有穷期。</p><p>我们坚信，</p><p>具有5000多年文明历史、创造了新中国70年伟大成就的中国人民和中华民族，</p><p>在实现实现中华民族伟大复兴中国梦的新征程上，</p><p>必将书写出更新更美的时代篇章。</p><p>为中华人民共和国成立70周年，</p><p>为中国繁荣富强和全国各族人民幸福安康，</p><p>干杯！</p><p>【本页已关闭评论】</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天是2019年10月1日，伟大的中华人民共和国70周年华诞。&lt;/p&gt;
+&lt;p&gt;中国人民是伟大的人民，&lt;/p&gt;
+&lt;p&gt;中华民族是伟大的民族，&lt;/p&gt;
+&lt;p&gt;中华文明是伟大的文明。&lt;/p&gt;
+&lt;p&gt;历史照亮未来，征程未有穷期。&lt;/p&gt;
+&lt;p&gt;我们坚信，&lt;/p&gt;
+&lt;p&gt;具有5000
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 7 及以上版本常用优化脚本</title>
+    <link href="https://arlxn.xyz/winuh.html"/>
+    <id>https://arlxn.xyz/winuh.html</id>
+    <published>2019-08-23T16:18:39.000Z</published>
+    <updated>2019-08-27T04:25:13.965Z</updated>
+    
+    <content type="html"><![CDATA[<p>介绍几个常用的优化脚本和问题处理脚本<br>不定期更新</p><a id="more"></a><h2 id="请注意："><a href="#请注意：" class="headerlink" title="请注意："></a>请注意：</h2><h2 id="本页面中绝大多数脚本只在官方原版系统中测试过"><a href="#本页面中绝大多数脚本只在官方原版系统中测试过" class="headerlink" title="本页面中绝大多数脚本只在官方原版系统中测试过"></a>本页面中绝大多数脚本只在官方原版系统中测试过</h2><h2 id="对于Ghost方式安装的系统本人不保证一定都有效和不出现任何问题"><a href="#对于Ghost方式安装的系统本人不保证一定都有效和不出现任何问题" class="headerlink" title="对于Ghost方式安装的系统本人不保证一定都有效和不出现任何问题"></a>对于Ghost方式安装的系统本人不保证一定都有效和不出现任何问题</h2><h2 id="如果你有什么好的脚本也可以在下方留言区留下"><a href="#如果你有什么好的脚本也可以在下方留言区留下" class="headerlink" title="如果你有什么好的脚本也可以在下方留言区留下"></a>如果你有什么好的脚本也可以在下方留言区留下</h2><h2 id="1-Win8-安装-net-3-0"><a href="#1-Win8-安装-net-3-0" class="headerlink" title="1.Win8+安装.net 3.0"></a>1.Win8+安装.net 3.0</h2><p>将以下命令中x换成你的挂载盘符<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism /online /enable-feature /featurename:netfx3 /All /source:x:\sources\sxs /Limitaccess</span><br></pre></td></tr></table></figure></p><h2 id="2-卸载OneDrive"><a href="#2-卸载OneDrive" class="headerlink" title="2.卸载OneDrive"></a>2.卸载OneDrive</h2><p>然鹅实测的时候局限性很大…<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">ECHO</span> OFF</span><br><span class="line"><span class="variable">%SystemRoot%</span>\SysWOW64\OneDriveSetup.exe /uninstall</span><br><span class="line"><span class="built_in">RD</span> "<span class="variable">%UserProfile%</span>\OneDrive" /Q /S</span><br><span class="line"><span class="built_in">RD</span> "<span class="variable">%LocalAppData%</span>\Microsoft\OneDrive" /Q /S</span><br><span class="line"><span class="built_in">RD</span> "<span class="variable">%ProgramData%</span>\Microsoft OneDrive" /Q /S</span><br><span class="line"><span class="built_in">RD</span> "C:\OneDriveTemp" /Q /S</span><br><span class="line">REG Delete "HKEY_CLASSES_ROOT\CLSID\&#123;<span class="number">018</span>D5C66-<span class="number">4533</span>-<span class="number">4307</span>-<span class="number">9</span>B53-<span class="number">224</span>DE2ED1FE6&#125;" /f</span><br><span class="line">REG Delete "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\&#123;<span class="number">018</span>D5C66-<span class="number">4533</span>-<span class="number">4307</span>-<span class="number">9</span>B53-<span class="number">224</span>DE2ED1FE6&#125;" /f</span><br><span class="line">END</span><br></pre></td></tr></table></figure></p><h2 id="3-Win7-右键没有新建选项"><a href="#3-Win7-右键没有新建选项" class="headerlink" title="3.Win7+右键没有新建选项"></a>3.Win7+右键没有新建选项</h2><p>这个需要复制到txt并改成reg导入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\New]</span><br><span class="line">@=&quot;&#123;D969A300-E7FF-11d0-A93B-00A0C90F2719&#125;&quot;</span><br></pre></td></tr></table></figure></p><h2 id="4-Win7-桌面右下角显示版本号"><a href="#4-Win7-桌面右下角显示版本号" class="headerlink" title="4.Win7+桌面右下角显示版本号"></a>4.Win7+桌面右下角显示版本号</h2><p>讲真，只有未注册版本在会在桌面右下角显示版本号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Control Panel\Desktop]</span><br><span class="line">&quot;PaintDesktopVersion&quot;=dword:00000001</span><br></pre></td></tr></table></figure></p><h2 id="5-Windows-8-1-安装完成之后删除安装缓存文件"><a href="#5-Windows-8-1-安装完成之后删除安装缓存文件" class="headerlink" title="5.Windows 8.1 安装完成之后删除安装缓存文件"></a>5.Windows 8.1 安装完成之后删除安装缓存文件</h2><p>Ghost系统无效<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /cleanup-image /startcomponentcleanup</span><br></pre></td></tr></table></figure></p><h2 id="6-Windows-10-LTSC-图片查看器修复"><a href="#6-Windows-10-LTSC-图片查看器修复" class="headerlink" title="6.Windows 10 LTSC 图片查看器修复"></a>6.Windows 10 LTSC 图片查看器修复</h2><p>实测部分版本导入后出现查看器异常无法看图的情况（常见于LTSC 2015）<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> "<span class="variable">%SYSTEMROOT%</span>\system32\<span class="built_in">cacls</span>.exe" "<span class="variable">%SYSTEMROOT%</span>\system32\config\system"</span><br><span class="line"><span class="keyword">if</span> '<span class="variable">%errorlevel%</span>' <span class="keyword">NEQ</span> '<span class="number">0</span>' (</span><br><span class="line"><span class="keyword">goto</span> UACPrompt</span><br><span class="line">) <span class="keyword">else</span> ( <span class="keyword">goto</span> gotAdmin )</span><br><span class="line">:UACPrompt</span><br><span class="line"><span class="built_in">echo</span> <span class="built_in">Set</span> UAC = CreateObject^("Shell.Application"^) &gt; "<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line"><span class="built_in">echo</span> UAC.ShellExecute "%~s0", "", "", "runas", <span class="number">1</span> &gt;&gt; "<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line">"<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line"><span class="keyword">exit</span> /B</span><br><span class="line">:gotAdmin</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">exist</span> "<span class="variable">%temp%</span>\getadmin.vbs" ( <span class="built_in">del</span> "<span class="variable">%temp%</span>\getadmin.vbs" )</span><br><span class="line"></span><br><span class="line"><span class="built_in">FTYPE</span> Paint.Picture=<span class="variable">%SystemRoot%</span>\System32\rundll32.exe "<span class="variable">%ProgramFiles%</span>\Windows Photo Viewer\PhotoViewer.dll", ImageView_Fullscreen %<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">FTYPE</span> jpegfile=<span class="variable">%SystemRoot%</span>\System32\rundll32.exe "<span class="variable">%ProgramFiles%</span>\Windows Photo Viewer\PhotoViewer.dll", ImageView_Fullscreen %<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">FTYPE</span> pngfile=<span class="variable">%SystemRoot%</span>\System32\rundll32.exe "<span class="variable">%ProgramFiles%</span>\Windows Photo Viewer\PhotoViewer.dll", ImageView_Fullscreen %<span class="number">1</span></span><br></pre></td></tr></table></figure></p><h2 id="7-防假死优化"><a href="#7-防假死优化" class="headerlink" title="7.防假死优化"></a>7.防假死优化</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Control Panel\Desktop]</span><br><span class="line">"WaitToKillAppTimeout"=dword:<span class="number">00000000</span></span><br></pre></td></tr></table></figure><h2 id="8-管理员取得所有权"><a href="#8-管理员取得所有权" class="headerlink" title="8.管理员取得所有权"></a>8.管理员取得所有权</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00　　 </span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\runas] </span><br><span class="line">@=&quot;管理员取得所有权&quot; </span><br><span class="line">&quot;NoWorkingDirectory&quot;=&quot;&quot;　　 </span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\runas\command] </span><br><span class="line">@=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot; </span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot;　　 </span><br><span class="line">[HKEY_CLASSES_ROOT\exefile\shell\runas2] </span><br><span class="line">@=&quot;管理员取得所有权&quot; </span><br><span class="line">&quot;NoWorkingDirectory&quot;=&quot;&quot;　　 </span><br><span class="line">[HKEY_CLASSES_ROOT\exefile\shell\runas2\command] </span><br><span class="line">@=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot; </span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F&quot;　　 </span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\runas] </span><br><span class="line">@=&quot;管理员取得所有权&quot; </span><br><span class="line">&quot;NoWorkingDirectory&quot;=&quot;&quot;　　 </span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\runas\command] </span><br><span class="line">@=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; /r /d y &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F /t&quot; </span><br><span class="line">&quot;IsolatedCommand&quot;=&quot;cmd.exe /c takeown /f \&quot;%1\&quot; /r /d y &amp;&amp; icacls \&quot;%1\&quot; /grant administrators:F /t&quot;</span><br></pre></td></tr></table></figure><h2 id="9-强制更新组策略"><a href="#9-强制更新组策略" class="headerlink" title="9.强制更新组策略"></a>9.强制更新组策略</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> "<span class="variable">%SYSTEMROOT%</span>\system32\<span class="built_in">cacls</span>.exe" "<span class="variable">%SYSTEMROOT%</span>\system32\config\system"</span><br><span class="line"><span class="keyword">if</span> '<span class="variable">%errorlevel%</span>' <span class="keyword">NEQ</span> '<span class="number">0</span>' (</span><br><span class="line"><span class="keyword">goto</span> UACPrompt</span><br><span class="line">) <span class="keyword">else</span> ( <span class="keyword">goto</span> gotAdmin )</span><br><span class="line">:UACPrompt</span><br><span class="line"><span class="built_in">echo</span> <span class="built_in">Set</span> UAC = CreateObject^("Shell.Application"^) &gt; "<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line"><span class="built_in">echo</span> UAC.ShellExecute "%~s0", "", "", "runas", <span class="number">1</span> &gt;&gt; "<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line">"<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line"><span class="keyword">exit</span> /B</span><br><span class="line">:gotAdmin</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">exist</span> "<span class="variable">%temp%</span>\getadmin.vbs" ( <span class="built_in">del</span> "<span class="variable">%temp%</span>\getadmin.vbs" )</span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line">gpupdate /force</span><br><span class="line"><span class="built_in">echo</span> 操作完成，按任意键退出</span><br><span class="line"><span class="built_in">Pause</span> &gt;<span class="built_in">NUL</span></span><br></pre></td></tr></table></figure><h2 id="10-清楚图标缓存"><a href="#10-清楚图标缓存" class="headerlink" title="10.清楚图标缓存"></a>10.清楚图标缓存</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">taskkill</span> /f /im explorer.exe</span><br><span class="line"><span class="built_in">CD</span> /d <span class="variable">%userprofile%</span>\AppData\Local</span><br><span class="line"><span class="built_in">DEL</span> IconCache.db /a</span><br><span class="line"><span class="built_in">start</span> explorer.exe</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;介绍几个常用的优化脚本和问题处理脚本&lt;br&gt;不定期更新&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>泠泫凝的异次元空间 - 导航</title>
+    <link href="https://arlxn.xyz/navi.html"/>
+    <id>https://arlxn.xyz/navi.html</id>
+    <published>2019-08-23T08:18:39.000Z</published>
+    <updated>2019-08-24T11:11:24.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>泠泫凝的异次元空间的导航页<br>不知道有什么？不知道看什么？不如进来看看~</p><a id="more"></a><p>本站自2019年8月23日起对站点全面改进，决定抛弃原有Hexo的分目录分类方式，采用导航页对站点整体结构化。</p><hr><h2 id="各大分区参见右侧“本文目录”"><a href="#各大分区参见右侧“本文目录”" class="headerlink" title="各大分区参见右侧“本文目录”"></a>各大分区参见右侧“本文目录”</h2><hr><h2 id="计算机技术专区"><a href="#计算机技术专区" class="headerlink" title="计算机技术专区"></a>计算机技术专区</h2><p>技术文档、说明、教程</p><table><thead><tr><th style="text-align:center">名 称</th><th style="text-align:center">分 类</th><th style="text-align:center">简 介</th></tr></thead><tbody><tr><td style="text-align:center"><a href="https://arlxn.xyz/adminrunbat.html">使用管理员权限运行批处理</a></td><td style="text-align:center">System</td><td style="text-align:center">N/A</td></tr><tr><td style="text-align:center"><a href="https://arlxn.xyz//netsq.html">通过命令行找出占网速的程序</a></td><td style="text-align:center">Network</td><td style="text-align:center">你可能接了条假宽带</td></tr><tr><td style="text-align:center"><a href="https://arlxn.xyz//sc.html">使用sc在命令行中创建服务</a></td><td style="text-align:center">Services</td><td style="text-align:center">命令行创建服务</td></tr><tr><td style="text-align:center"><a href="https://arlxn.xyz/winuh.html">Windows 7 及以上版本常用优化脚本</a></td><td style="text-align:center">Windows</td><td style="text-align:center">常用优化脚本</td></tr></tbody></table><hr><h2 id="二次元"><a href="#二次元" class="headerlink" title="二次元"></a>二次元</h2><p>二刺塬诶嘿嘿嘿嘿~ (～￣▽￣)→))<em>￣▽￣</em>)o</p><table><thead><tr><th style="text-align:center">名 称</th><th style="text-align:center">分 类</th><th style="text-align:center">简 介</th></tr></thead><tbody><tr><td style="text-align:center"><a href="https://arlxn.xyz//Gallery.html">图库</a></td><td style="text-align:center">Picture</td><td style="text-align:center">个人收集的图库</td></tr></tbody></table><hr><h2 id="效率办公"><a href="#效率办公" class="headerlink" title="效率办公"></a>效率办公</h2><p>要有效率的嘛~</p><table><thead><tr><th style="text-align:center">名 称</th><th style="text-align:center">分 类</th><th style="text-align:center">简 介</th></tr></thead><tbody><tr><td style="text-align:center"><a href="https://arlxn.xyzoutlookmailconfig.html/" target="_blank" rel="noopener">Outlook 第三方邮件客户端设置</a></td><td style="text-align:center">Outlook</td><td style="text-align:center">通用参数</td></tr><tr><td style="text-align:center"><a href="https://arlxn.xyz/WordBookPrint.html">Word单侧装订</a></td><td style="text-align:center">MSO Word</td><td style="text-align:center">N/A</td></tr><tr><td style="text-align:center"><a href="https://arlxn.xyz/WPSPro.html">WPS Pro 使用说明</a></td><td style="text-align:center">WPS</td><td style="text-align:center">N/A</td></tr></tbody></table><hr><h2 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h2><p>嗯对是学习资料</p><table><thead><tr><th style="text-align:center">名 称</th><th style="text-align:center">分 类</th><th style="text-align:center">简 介</th></tr></thead><tbody><tr><td style="text-align:center"><a href="https://arlxn.xyz/PoliticIdioms.html">高中政治哲学生活蕴含哲理的古诗词和成语</a></td><td style="text-align:center">高中政治学习资料</td><td style="text-align:center">N/A</td></tr></tbody></table><hr><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>无法归类的奇奇怪怪的东西…</p><table><thead><tr><th style="text-align:center">名 称</th><th style="text-align:center">分 类</th><th style="text-align:center">简 介</th></tr></thead><tbody><tr><td style="text-align:center"><a href="https://arlxn.xyz/ifuudoudou.html">威风堂堂</a></td><td style="text-align:center">歌词</td><td style="text-align:center">233</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;泠泫凝的异次元空间的导航页&lt;br&gt;不知道有什么？不知道看什么？不如进来看看~&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>屏蔽搜狗输入法广告方法</title>
+    <link href="https://arlxn.xyz/sgpyggpb.html"/>
+    <id>https://arlxn.xyz/sgpyggpb.html</id>
+    <published>2019-08-02T05:16:56.000Z</published>
+    <updated>2019-08-02T05:22:51.465Z</updated>
+    
+    <content type="html"><![CDATA[<p>切输入法第一下卡顿、切下搜狗后明显感觉鼠标状态是繁忙、弹出搜狐新闻提示、后台会有一个pinyinup.exe 可能会引起全屏游戏后弹到桌面解决方案</p><a id="more"></a><p>将下面内容复制进reg文件中导入重启电脑即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\ImeUtil.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\PinyinUp.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SogouCloud.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\showie.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SohuNews.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SGTool.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SGDownload.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SogouComMgr.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SogouExe.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SGSetc.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\userNetSchedule.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\crashrpt.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SogouFlash.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SeFastInstall.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SkinReg.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sgimeguard.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\skinbox.exe]</span><br><span class="line">&quot;Debugger&quot;=&quot;c:\\windows\\temp\\P2P类.exe&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;切输入法第一下卡顿、切下搜狗后明显感觉鼠标状态是繁忙、弹出搜狐新闻提示、后台会有一个pinyinup.exe 可能会引起全屏游戏后弹到桌面解决方案&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://arlxn.xyz/tags/Tools/"/>
+    
+      <category term="SouGouPinYin" scheme="https://arlxn.xyz/tags/SouGouPinYin/"/>
+    
+      <category term="Rubbish" scheme="https://arlxn.xyz/tags/Rubbish/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过命令行找出占网速的程序</title>
+    <link href="https://arlxn.xyz/netsq.html"/>
+    <id>https://arlxn.xyz/netsq.html</id>
+    <published>2019-08-02T05:10:09.000Z</published>
+    <updated>2019-08-02T05:18:39.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>没有任何程序在前台运行，网速却在一直被占用</p><a id="more"></a><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>查看下路由器里面服务器的外网连接状态，你这个路由可以看见外网连接IP的，就是点下查看连接查看是连接的哪个IP地址记录下。</p><p>##第二步</p><p>在服务器打开cmd  输入netstat -ao 可以看到你服务器当前网络连接通讯状态，查找下有没有在路由器里面看到的IP，如果觉得cmd里面不方便查找，可以用netstat -ao&gt;C:\1.txt 那么你看到的内容就打印到C:\1.txt内容去了</p><p>##第三步</p><p>查看IP后，在最后面会有一个数字PID的标识，通过你查找的IP，看下具体的进程PID多少</p><h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>打开任务管理器，点下查看—选择列—里面有一个PID进程标识符勾选上，再看下刚才查的IP对应的PID是多少，就知道是哪个进程连接的外网了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;没有任何程序在前台运行，网速却在一直被占用&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="sys" scheme="https://arlxn.xyz/tags/sys/"/>
+    
+      <category term="network" scheme="https://arlxn.xyz/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用sc在命令行中创建服务</title>
+    <link href="https://arlxn.xyz/sc.html"/>
+    <id>https://arlxn.xyz/sc.html</id>
+    <published>2019-08-02T04:59:04.000Z</published>
+    <updated>2019-08-02T05:03:55.274Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文讲述如何使用sc在命令行中创建服务(Services)。</p><a id="more"></a><p>如下:在命令行模式下执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc create TestService binpath= &quot;c:\in estapp.exe&quot; displayname= &quot;TestService&quot; depend= Tcpip start= auto</span><br></pre></td></tr></table></figure></p><p>注意这里的格式，“=”后面是必须空一格的，否则会出现错误。在提示建立成功后，可以直接输入如下命令来启动服务，或者可以直接在“管理工具”的“服务”中直接启动。<br><code>net start TestService</code></p><hr><p>C:\Documents and Settings\Administrator&gt;sc create<br>描述:<br>在注册表和服务数据库中创建服务项。<br>用法:<br>sc <server> create [service name] [binPath= ] <option1> <option2>…<br>选项:<br>注意: 选项名称包括等号。<br>type= &lt;own|share|interact|kernel|filesys|rec&gt; </option2></option1></server></p><pre><code>(默认 = own) </code></pre><p>start= &lt;boot|system|auto|demand|disabled&gt; </p><pre><code>(默认 = demand) </code></pre><p>error= &lt;normal|severe|critical|ignore&gt; </p><pre><code>(默认 = normal) </code></pre><p>binPath= <binarypathname> </binarypathname></p><p>group= <loadordergroup> </loadordergroup></p><p>tag= &lt;yes|no&gt; </p><p>depend= &lt;依存关系(以 / (斜杠) 分隔)&gt; </p><p>obj= &lt;AccountName|ObjectName&gt; </p><pre><code>(默认 = LocalSystem) </code></pre><p>DisplayName= &lt;显示名称&gt; </p><p>password= &lt;密码&gt; </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文讲述如何使用sc在命令行中创建服务(Services)。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="sys" scheme="https://arlxn.xyz/categories/sys/"/>
+    
+    
+      <category term="sys" scheme="https://arlxn.xyz/tags/sys/"/>
+    
+      <category term="Services" scheme="https://arlxn.xyz/tags/Services/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Outlook 第三方邮件客户端设置</title>
+    <link href="https://arlxn.xyz/outlookmailconfig.html"/>
+    <id>https://arlxn.xyz/outlookmailconfig.html</id>
+    <published>2019-07-31T08:13:55.000Z</published>
+    <updated>2019-07-31T08:13:23.761Z</updated>
+    
+    <content type="html"><![CDATA[<p>第三方客户端上配置Outlook邮箱所需参数。</p><a id="more"></a><h2 id="参数设置："><a href="#参数设置：" class="headerlink" title="参数设置："></a>参数设置：</h2><p>0.账户类型：选IMAP<br>1.用户名：你的Outlook邮箱，不必区分大小写（例如：<a href="mailto:LingXuanNing@Outlook.com" target="_blank" rel="noopener">LingXuanNing@Outlook.com</a>）。<br>2.密码：你的Outlook邮箱密码。<br>3.接收服务器设置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器：imap-mail.outlook.com</span><br><span class="line">端口：993</span><br><span class="line">SSL: SSL/TLS</span><br></pre></td></tr></table></figure><p>4.外发服务器设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器：smtp-mail.outlook.com</span><br><span class="line">端口：587</span><br><span class="line">SSL：STARTTLS</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第三方客户端上配置Outlook邮箱所需参数。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="OutlookConfig" scheme="https://arlxn.xyz/categories/OutlookConfig/"/>
+    
+    
+      <category term="Sys/Mail" scheme="https://arlxn.xyz/tags/Sys-Mail/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用管理员权限运行批处理</title>
+    <link href="https://arlxn.xyz/adminrunbat.html"/>
+    <id>https://arlxn.xyz/adminrunbat.html</id>
+    <published>2019-07-24T13:57:07.000Z</published>
+    <updated>2019-08-26T14:08:07.942Z</updated>
+    
+    <content type="html"><![CDATA[<p>在写批处理的时候发现一些人的电脑装的是正版的系统，默认会弹出来uac的那个框框。默认cmd执行的时候是不带任何权限的。如果执行的批处理命令需要管理员权限，那么命令执行将会失败。本文将讲述如何避免这种情况的出现。</p><a id="more"></a><p>写批处理的时候在<strong>所有批处理命令</strong>的最上方加入下列代码即可解决问题。</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">&gt;<span class="built_in">nul</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> "<span class="variable">%SYSTEMROOT%</span>\system32\<span class="built_in">cacls</span>.exe" "<span class="variable">%SYSTEMROOT%</span>\system32\config\system"</span><br><span class="line"><span class="keyword">if</span> '<span class="variable">%errorlevel%</span>' <span class="keyword">NEQ</span> '<span class="number">0</span>' (</span><br><span class="line"><span class="keyword">goto</span> UACPrompt</span><br><span class="line">) <span class="keyword">else</span> ( <span class="keyword">goto</span> gotAdmin )</span><br><span class="line">:UACPrompt</span><br><span class="line"><span class="built_in">echo</span> <span class="built_in">Set</span> UAC = CreateObject^("Shell.Application"^) &gt; "<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line"><span class="built_in">echo</span> UAC.ShellExecute "%~s0", "", "", "runas", <span class="number">1</span> &gt;&gt; "<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line">"<span class="variable">%temp%</span>\getadmin.vbs"</span><br><span class="line"><span class="keyword">exit</span> /B</span><br><span class="line">:gotAdmin</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">exist</span> "<span class="variable">%temp%</span>\getadmin.vbs" ( <span class="built_in">del</span> "<span class="variable">%temp%</span>\getadmin.vbs" )</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在写批处理的时候发现一些人的电脑装的是正版的系统，默认会弹出来uac的那个框框。默认cmd执行的时候是不带任何权限的。如果执行的批处理命令需要管理员权限，那么命令执行将会失败。本文将讲述如何避免这种情况的出现。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="sys" scheme="https://arlxn.xyz/tags/sys/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WPS Pro 使用说明</title>
+    <link href="https://arlxn.xyz/WPSPro.html"/>
+    <id>https://arlxn.xyz/WPSPro.html</id>
+    <published>2019-07-21T05:39:27.000Z</published>
+    <updated>2019-07-21T06:44:49.063Z</updated>
+    
+    <content type="html"><![CDATA[<p>预装软件 WPS Pro 纯净专享版说明与帮助</p><a id="more"></a><h2 id="提示：本说明仅适用于预装在Lxn定制版本Windows中的WPS-Office，并非所有版本都适用于本说明。"><a href="#提示：本说明仅适用于预装在Lxn定制版本Windows中的WPS-Office，并非所有版本都适用于本说明。" class="headerlink" title="提示：本说明仅适用于预装在Lxn定制版本Windows中的WPS Office，并非所有版本都适用于本说明。"></a><strong>提示：本说明仅适用于预装在Lxn定制版本Windows中的WPS Office，并非所有版本都适用于本说明。</strong></h2><h5 id="如何判断是否为Lxn定制版本的Windows？"><a href="#如何判断是否为Lxn定制版本的Windows？" class="headerlink" title="如何判断是否为Lxn定制版本的Windows？"></a>如何判断是否为Lxn定制版本的Windows？</h5><p>如图所示红框内为图中字样即为Lxn定制版。</p><fancybox><img src="https://i.loli.net/2019/07/21/5d33fd654157787957.png" alt></fancybox><hr><h2 id="如何关闭更新？"><a href="#如何关闭更新？" class="headerlink" title="如何关闭更新？"></a>如何关闭更新？</h2><p>在开始菜单中寻找“配置工具”，点击高级，“升级设置”，“关闭自动升级”即可。</p><fancybox><img src="https://i.loli.net/2019/07/21/5d33feae8dfec25168.png" alt></fancybox><br><fancybox><img src="https://i.loli.net/2019/07/21/5d33fefaabe2531258.png" alt></fancybox><br><fancybox><img src="https://i.loli.net/2019/07/21/5d33ff1a442b798397.png" alt></fancybox><hr><h2 id="激活与注册"><a href="#激活与注册" class="headerlink" title="激活与注册"></a>激活与注册</h2><p>该版本 WPS 默认即为注册成功的版本，无需注册。</p><hr><h2 id="哪里可以下载？"><a href="#哪里可以下载？" class="headerlink" title="哪里可以下载？"></a>哪里可以下载？</h2><p>很抱歉，这款定制版目前只能在Lxn定制版Windows操作系统中预装，不开放下载。</p><hr><h2 id="如何卸载？"><a href="#如何卸载？" class="headerlink" title="如何卸载？"></a>如何卸载？</h2><p>按照其他软件的常规卸载方式卸载即可。</p><hr><h2 id="我可以登录吗？"><a href="#我可以登录吗？" class="headerlink" title="我可以登录吗？"></a>我可以登录吗？</h2><p>完全可以。</p><hr><h2 id="无法使用WPS打开文档"><a href="#无法使用WPS打开文档" class="headerlink" title="无法使用WPS打开文档"></a>无法使用WPS打开文档</h2><p>点击配置工具。</p><fancybox><img src="https://i.loli.net/2019/07/21/5d34006b7621e50570.png" alt></fancybox><br>将下图所有复选框全部选中，然后点击确定。<br><fancybox><img src="https://i.loli.net/2019/07/21/5d3400b3443bd85100.png" alt></fancybox><br>如果仍然不能修复，则可以点击下图界面中的“重新注册组件”。<br><fancybox><img src="https://i.loli.net/2019/07/21/5d3400db9bca281033.png" alt></fancybox><hr><h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><h4 id="使用类"><a href="#使用类" class="headerlink" title="使用类"></a>使用类</h4><p>WPS和微软的Office（以下简称MSO）使用方法基本相同，只有一些界面设计与微软 Office 不相同。所以WPS的用法基本上可以参照Office用法。</p><h4 id="打印类"><a href="#打印类" class="headerlink" title="打印类"></a>打印类</h4><p>打印方式WPS与MSO有所不同。</p><fancybox><img src="https://i.loli.net/2019/07/21/5d34027d257f275849.png" alt="Microsoft Office Word 2010"><img src="https://i.loli.net/2019/07/21/5d3402af665fc83503.png" alt="WPS Word Pro"></fancybox><br>其中要注意的是如果需要使用A3纸打印两页A4的时候，MSO会自动适配缩放设置，WPS则需要手动设置缩放纸型。<br><fancybox><img src="https://i.loli.net/2019/07/21/5d340357dd46815926.png" alt></fancybox><hr><h2 id="人工咨询"><a href="#人工咨询" class="headerlink" title="人工咨询"></a>人工咨询</h2><p>不是每天都在。</p><blockquote><p>QQ:1762165046<br>E-Mail:<a href="mailto:LingXuanNing@Outlook.com" target="_blank" rel="noopener">LingXuanNing@Outlook.com</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;预装软件 WPS Pro 纯净专享版说明与帮助&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Sys" scheme="https://arlxn.xyz/categories/Sys/"/>
+    
+      <category term="Preload" scheme="https://arlxn.xyz/categories/Sys/Preload/"/>
+    
+    
+      <category term="Software" scheme="https://arlxn.xyz/tags/Software/"/>
+    
+      <category term="Preload" scheme="https://arlxn.xyz/tags/Preload/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图片墙</title>
+    <link href="https://arlxn.xyz/Gallery.html"/>
+    <id>https://arlxn.xyz/Gallery.html</id>
+    <published>2019-07-17T09:31:47.000Z</published>
+    <updated>2019-07-25T04:20:52.914Z</updated>
+    
+    <content type="html"><![CDATA[<p>图库/图片分享<br>请注意：本站和本站作者可能不拥有这些图片的全部版权。<br>提示：网页已转移至新页面，点击本文章查看新位置。</p><a id="more"></a><h2 id="由于图片过多且图片过大，从2019年7月25日起重新设计了Gallery图库。"><a href="#由于图片过多且图片过大，从2019年7月25日起重新设计了Gallery图库。" class="headerlink" title="由于图片过多且图片过大，从2019年7月25日起重新设计了Gallery图库。"></a>由于图片过多且图片过大，从2019年7月25日起重新设计了Gallery图库。</h2><h2 id="新地址为https-arlxn-github-io-Gallery-index-html"><a href="#新地址为https-arlxn-github-io-Gallery-index-html" class="headerlink" title="新地址为https://arlxn.github.io/Gallery/index.html"></a>新地址为<a href="https://arlxn.github.io/Gallery/index.html" target="_blank" rel="noopener">https://arlxn.github.io/Gallery/index.html</a></h2><blockquote><p>Ps：由于图片超级多所以加载速度可能超级慢<br>图床：<a href="https://img.vim-cn.com" target="_blank" rel="noopener">https://img.vim-cn.com</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;图库/图片分享&lt;br&gt;请注意：本站和本站作者可能不拥有这些图片的全部版权。&lt;br&gt;提示：网页已转移至新页面，点击本文章查看新位置。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Gallery" scheme="https://arlxn.xyz/categories/Gallery/"/>
+    
+    
+      <category term="Pics" scheme="https://arlxn.xyz/tags/Pics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>威风堂堂中文/日语/罗马音对照</title>
+    <link href="https://arlxn.xyz/ifuudoudou.html"/>
+    <id>https://arlxn.xyz/ifuudoudou.html</id>
+    <published>2019-07-12T13:43:55.000Z</published>
+    <updated>2019-07-17T09:34:00.990Z</updated>
+    
+    <content type="html"><![CDATA[<p>还有bmg（滑稽）<br><a id="more"></a><br>威風堂々（いふうどうどう）　<br>i fu u do u do u<br>威风堂堂　</p><p>時（とき）には噛（か）んだりして　痛（いた）みを覚（おぼ）えさせて　<br>to ki ni wa ka n da ri shi te　i ta mi wo o bo e sa se te　<br>偶而就咬下一口　让我记住这阵痛 　<br>溢（あふ）れるエキタイで　汚（よご）してよ　全部（ぜんぶ）　<br>a fu re ru e ki ta i de　yo go shi te yo　ze n bu　<br>用溢出的液体　弄脏我吧　全部 　<br>足（あし）の先（さき）から　ずっと　這（は）わせたその神経（しんけい）はもう<br>a shi no sa ki ka ra　zu tto　ha wa se ta so no shi n ke i wa mo u<br>自脚尖　唰地　缓缓爬上的那条神经　早就<br>感触（かんしょく）に溺（おぼ）れる　身体（からだ）ココロを連（つ）れて<br>ka n sho ku ni o bo re ru　ka ra da ko ko ro wo tsu re te<br>沉溺于触感的　身体　领着心灵 </p><p>指（ゆび）くわえた我慢（がまん）の中（なか）　欲（ほ）してんのが理想（りそう）？<br>yu bi ku wa e ta ga ma n no na ka　ho shi te n no ga ri so u<br>在咬着手指忍耐之中　想要的就是所谓理想？</p><p>いらない　全（すべ）てはいらない　磨（みが）き上（あ）げてる邪魔（じゃま）な PRIDE<br>i ra na i　su be te wa i ra na i　mi ga ki a ge te ru ja ma na pride<br>才不需要　全部都不需要　被磨练出的　扰人的 PRIDE<br>無意味（むいみ）な世界（せかい）のルールくらい　無駄（むだ）としか言（い）い様（よう）がない<br>mu i mi na se ka i no ru u ru ku ra i　mu da to shi ka i i yo u ga na i<br>像那种无意义的世界的规则　除了没用之外无话可说<br>隠（かく）しているあなたの STYLE　剥（む）き出（だ）しにあるがまま DIVE<br>ka ku shi te i ru a na ta no style　mu ki da shi ni a ru ga ma ma dive<br>隐藏起的　你的 STYLE　剥除一切　以原本的模样 DIVE<br>そこに生（う）まれるのは期待（きたい）　外（はず）れなんかじゃない　頂（いただき）の SMILE<br>so ko ni u ma re ru no wa ki ta i　ha zu re na n ka ja na i　i ta da ki no smile<br>从中生出的就是期待　毫无误差　顶尖的 SMILE </p><p>吐息（といき）を合（あ）わせた相性（あいしょう）　耳（みみ）に吹（ふ）きかける感情（かんじょう）<br>to i ki wo a wa se ta a i sho u　mi mi ni fu ki ka ke ru ka n jo u<br>呼吸同调的适合度　吹上耳边的感情<br>破裂（はれつ）しそうな胸（むね）　騒（さわ）ぎだす細胞（さいぼう）<br>ha re tsu shi so u na mu ne　sa wa gi da su sa i bo u<br>彷佛要裂开的胸口　开始骚动的细胞 </p><p>脱（ぬ）ぎかけてるシャツ　優（やさ）しく裂（さ）いてよ　まず　かまわず<br>nu gi ka ke te ru sha tsu　ya sa shi ku sa i te yo　ma zu　ka ma wa zu<br>开始脱下的衬衫　温柔的撕裂它吧　这是第一点<br>get フライングも有（あ）り　躊躇（ためら）わないで　darlin’<br>get fu ra i n gu mo a ri　ta me ra wa na i de　darlin<br>不顾一切　Get　偶而也会偷跑　不要再犹豫啰　darlin’ </p><p>自由（じゆう）な世界（せかい）のど真（ま）ん中（なか）　夢見（ゆめみ）てんのが本性（ほんしょう）？<br>ji yu u na se ka i no do ma n na ka　yu me mi te n no ga ho n sho u<br>在自由世界的正中央　做梦幻想就是所谓本性？ </p><p>いらない　全（すべ）てはいらない　怖気（おじけ）づいた野望（やぼう）の TRY<br>i ra na i　su be te wa i ra na i　o ji ke zu i ta ya bo u no try<br>才不需要　全部都不需要　令人害怕　充满野心的 TRY<br>満足（まんぞく）なんてそこにない　目（め）に見（み）える哀（あわ）れな未来（みらい）<br>ma n zo ku na n te so ko ni na i　me ni mi e ru a wa re na mi ra i<br>才不会为此感到满足　可见的悲哀未来<br>思（おも）い通（どお）りにできる LIFE　手（て）にできるかはあなた次第（しだい）<br>o mo i do o ri ni de ki ru life　te ni de ki ru ka wa a na ta shi da i<br>能随心所欲的 LIFE　能不能入手全都看你<br>隠（かく）したりなんかはしない　誰（だれ）よりも誇（ほこ）らしげに　できる MIND<br>ka ku shi ta ri na n ka wa shi na i　da re yo ri mo ho ko ra shi ge ni　de ki ru mind<br>才不会将它隐藏起来　要比谁都还要能骄傲夸耀的 MIND </p><p>ホラこの世界（せかい）の中（なか）　他（ほか）にはない<br>ho ra ko no se ka i no na ka　ho ka ni wa na i<br>看吧　在这世界之中　除此之外<br>確（たし）かなもの　自分（じぶん）以外（いがい）は皆無（かいむ）<br>ta shi ka na mo no　ji bu n i ga i wa ka i mu<br>确切的事物　除了自己以外什么也没有 </p><p>小（ちい）さくなってる場合（ばあい）じゃない　いつだってNo Time! ALL RIGHT<br>chi i sa ku na tte ru ba a i ja na i　i tsu da tte no time all right<br>可不是缩起身子的时候喔　无论何时 No Time!　ALL RIGHT<br>上限値（じょうげんち）超（こ）え　エンジン　全開（ぜんかい）でいっちゃえ　BURN BURN BURN<br>jo u ge n chi ko e　e n ji n　ze n ka i de i ccha e　burn burn burn<br>超越上限值　引擎全开的冲吧　BURN BURN BURN<br>欲（ほ）しがってんのは　そう　気持（きも）ちいいの more…<br>ho shi ga tte n no wa　so u　ki mo chi i no more<br>想要的啊没错　就是　令人舒服的 more…<br>あるがままの想（おも）いでDANCE!　イイナリでGET DOWN!<br>a ru ga ma ma no o mo i de dance　i i na ri de get down<br>用最原本的心情 DANCE!　随你所说的 GET DOWN! </p><p>いらない　全（すべ）てはいらない　磨（みが）き上（あ）げてる邪魔（じゃま）な PRIDE<br>i ra na i　su be te wa i ra na i　mi ga ki a ge te ru ja ma na pride<br>才不需要　全部都不需要　被磨练出的　扰人的 PRIDE<br>無意味（むいみ）な世界（せかい）のルールくらい　無駄（むだ）としか言（い）い様（よう）がない<br>mu i mi na se ka i no ru u ru ku ra i　mu da to shi ka i i yo u ga na i<br>像那种无意义的世界的规则　除了没用之外无话可说<br>隠（かく）しているあなたの STYLE　剥（む）き出（だ）しにあるがまま DIVE<br>ka ku shi te i ru a na ta no style　mu ki da shi ni a ru ga ma ma dive<br>隐藏起的　你的 STYLE　剥除一切　以原本的模样 DIVE<br>そこに生（う）まれるのは期待（きたい）　外（はず）れなんかじゃない　頂（いただき）の SMILE<br>so ko ni u ma re ru no wa ki ta i　ha zu re na n ka ja na i　i ta da ki no smile<br>从中生出的就是期待　毫无误差　顶尖的 SMILE </p><p>ホラこの世界（せかい）で今（いま）　解（と）き放（はな）って<br>ho ra ko no se ka i de i ma　to ki ha na tte<br>看吧　在这世界在此刻　解放出那<br>鋭（するど）くギラつかせた希望（きぼう）　もっと本気（ほんき）出（だ）していいよ<br>su ru do ku gi ra tsu ka se ta ki bo u　mo tto ho n ki da shi te i i yo<br>锐利而光芒强烈的希望　再更认真一些也行喔</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;还有bmg（滑稽）&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Lyrics" scheme="https://arlxn.xyz/categories/Lyrics/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>高中政治哲学生活蕴含哲理的古诗词和成语</title>
+    <link href="https://arlxn.xyz/PoliticIdioms.html"/>
+    <id>https://arlxn.xyz/PoliticIdioms.html</id>
+    <published>2019-07-12T13:37:20.000Z</published>
+    <updated>2019-07-12T13:41:53.243Z</updated>
+    
+    <content type="html"><![CDATA[<p>嗯对是学习资料<br><a id="more"></a></p><ol><li>和实生物，同则不继（矛盾）</li><li>君子和而不同，小人同而不和（矛盾）</li><li>天下皆知美之为美，斯恶矣；皆知善之为善，斯不善矣（矛盾）</li><li>有无相生，难易相成，长短相形，高下相倾，音声相和，前后相随。（矛盾）</li><li>天下之至柔，驰骋天下之至坚。（矛盾）</li><li>知其雄，守其雌；知其白，收其黑；知其荣，守其辱。（矛盾）</li><li>兵强则灭，木强则折（矛盾双方转化）</li><li>福兮祸之所倚，祸兮福之所伏（矛盾）</li><li>乱生于治，怯生于勇。（矛盾在一定条件下相互转化）</li><li>方生方死，方死方生。（否定相对静止）</li><li>投之亡地而后存，陷之死地而后生。（矛盾双方转化。）</li><li>仁者见仁智者见智（不同人对同一事物有不同见解。）</li><li>家家有本难念的经（矛盾普遍性）</li><li>蔷薇总带刺（矛盾的主次方面）</li><li>金无足赤人无完人（矛盾的主次方面）</li><li>最好苹果酒带着木桶味道，太阳里也有黑点（矛盾主次方面）</li><li>士别三日当刮目相待（事物变化发展）</li><li>物格而后致知，致知而后意诚，意成而后心正，心正而后修身,身修而后齐家,家齐而后国治,国治而后天下平(联系)</li><li>人不能两次踏进同一条河（事物是变化发展的）</li><li>人一次也不能踏进同一条河（否认相对静止）</li><li>静者静动，非不动；静即含动，动不舍静。（绝对运动和相对静止。）</li><li>天有常道矣，地有常数矣，君子有常体。（规律普遍性）</li><li>日方中方睨，物方生方死（否认相对静止）</li><li>飞矢不动（否认相对静止）</li><li>旋岚偃岳而常静，江河竞注而不流，野马飘鼓而不动，日月历天而周。（绝对静止，否认运动）</li><li>物是观念的集合。（唯心主义）</li><li>万物都在概念中动。（形而上学）</li><li>生死有命，富贵在天（客观唯心主义）</li><li>日往则月来，月往则日来，日月相推而明生焉，寒往则暑来，暑往则寒来，寒暑相推而岁成焉。（事物运动）</li><li>不是风动，不是幡动，仁者心动。（主观唯心主义）</li><li>世界发展是“绝对精神”的自我运动。（客观唯心主义）</li><li>世界的本源是水，大地浮于水上，没有水就没有万物。（朴素唯物主义）</li><li>世界是一团永恒的活火，它在一定的分寸上燃烧，在一定的分寸上熄灭。（朴素唯物主义+辩证法运动观）</li><li>原子和虚空是世界的本源。（形而上学唯物主义）</li><li>天地之变，阴阳之化，天地合而万物生，阴阳接而变化起。（朴素唯物主义）</li><li>气者，理之依也，阴阳二者充满太虚，此外更无他物。（朴素唯物主义）</li><li>我的灵明便是天地鬼神的主宰。（主观唯心主义）</li><li>存在即被感知。（主观唯心主义）</li><li>理生万事，理主动静，未有此气，已有此理。万一山河大地都陷了，毕竟理却在这里。（客观唯心主义）</li><li>上帝创世说。（客观唯心主义）</li><li>自然神不是别的，就是自然本身，人神不是别的，就是人本身。（唯物主义）</li><li>仓廪实而知礼节，衣食足而知荣辱。（社会存在决定社会意识（物质决定意识））</li><li>到什么山，唱什么歌（具体问题具体分析）</li><li>量体裁衣，看菜吃饭，因材施教。（具体问题具体分析）</li><li>心病终须心药医，解铃还是系铃人（矛盾具有特殊性）</li><li>水深鱼集，林茂鸟集。（联系）</li><li>善有善报，恶有恶报。（否认联系的客观性）</li><li>不让下田，怎会耕田；不会耕田，怎能下田。（实践与认识的关系）</li><li>知屋漏者在宇下，知政失者在草野。（实践是认识的基础）</li><li>不观高崖，何以知颠坠之患，不临深渊，何以知没溺之患，不观巨海，何以知风波之患。（实践是认识的基础）</li><li>横看成岭侧成峰，远看高低各不同，不识庐山真面目，只缘身在此山中。（看问题的角度不同产生不同的看法）</li><li>桑条无叶土生烟，萧管迎龙水庙前，朱门几处耽歌舞，犹恐春阴咽管弦。<br>（不同的立场会有不同的价值选择和判断）</li><li>知之为知之，不知为不知。（实事求是、一切从实际出发）</li><li>老骥伏枥，志在千里，烈士暮年壮心不已。（发挥主观能动性）</li><li>问渠那得清如许，为有源头活水来。（实践是认识的基础）</li><li>离离草原上，一岁一枯荣；野火烧不尽，春分吹又生。（新事物具有强大生命力。）</li><li>年年岁岁花相似，岁岁年年人不同。（变化发展）</li><li>射人先射马，擒贼先擒王。（抓主要矛盾）</li><li>近水知鱼性，近山知鸟音。（实践是认识的基础）</li><li>纸上得来终觉浅，绝知此事要躬行（实践是认识的基础）</li><li>先天下之忧而忧，后天下之乐而乐（群众观点和群众路线）</li><li>成玉须烧三日满，辨材须待七年期（要重视量的积累）</li><li>近朱者赤近墨者黑（联系（外部因素的影响））</li><li>日有所思夜有所想（意识是客观存在的反映）</li><li>按图索骥（违反一切从实际出发）</li><li>不登高山，不知天之高；不临深渊，不知地之厚（实践是认识的基础）</li><li>生死有命，富贵在天（客观唯心主义）</li><li>命里有时终须有，命里无时莫强求（客观唯心主义）</li><li>世异则事异，事异则备变（社会意识随社会存在变化而变化）</li><li>天不变，道亦不变（客观唯心主义）</li><li>尽信书，不如无书（实践）</li><li>择其善者而从之，其不善者而改之（辩证否定）</li><li>一叶障目不见泰山（只看部分不看整体）</li><li>虚心使人进步，骄傲使人落后（矛盾双方在一定条件下相互转化）</li><li>庖丁解牛，游刃有余（尊重客观规律）</li><li>揠苗助长，苗枯田荒（违反规律客观性）</li><li>橘生淮南则为橘，生于淮北则为枳（联系（强大外部环境对事物的影响，没有看到现象背后的本质））</li><li>万事只是一种不可名状的旋风，瞬息万变，拒绝以事物名称，主张对客观事物什么都不能说。）</li><li>霜从今夜起，月是故乡明（意识的能动性）</li><li>月有阴晴圆缺，人有悲欢离合（规律具有客观性）</li><li>和而不同（矛盾同一性）</li><li>身之所历，目之所见，是铁门坎（实践是认识的基础）</li><li>其胸之竹，不是眼之竹（意识的能动性）</li><li>天下妙土，必有妙眼，渠见妙果，便会妙手写出来~~~~无他，只因妙手所写纯是妙眼所见，若眼未见，他绝不肯放手便写，此良工之所永异与洛工也。）</li><li>树欲静而风不止（规律是客观的）</li><li>忽如一夜春风来，千树万树梨花开（发展）</li><li>我思故我在（唯心主义，我在故我思（唯物主义）</li><li>真理是时间的女儿，不是权威的女儿（实践是检验哲理的唯一标准）</li><li>千里之堤毁于蚁穴（量变引起质变）</li><li>一夫当关，万夫莫开（抓住主要矛盾）</li><li>一叶知秋（矛盾特殊性/ 联系）</li><li>一朝被蛇咬，十年怕井绳（犯了经验主义错误，没有调查研究，没有做到一切从实际出发）</li><li>一客失了信，百客不登门（量变引起质变）</li><li>旧时王谢堂前燕，飞入寻常百姓家（事物是变化发展的）</li><li>牵一发而动全身（部分对整体的影响）</li><li>忽疏小善，方恢大略，愚者千虑，必有一得，智者千虑必有一失（矛盾的普遍性）</li><li>天下难事必作于易（矛盾双方在一定条件下相互转化）</li><li>昼出耕田夜绩麻，村庄儿女各当家，童孙未解供耕织，也徬桑荫学种瓜）</li><li>苟利国家生死以，岂因祸福避趋之（人的价值在于对社会的贡献）</li><li>勿以恶小而为之，勿以善小而不为（量变到一定程度会引起质变）</li><li>木无本必枯，水无源必竭（联系）</li><li>思所以危则安，思所以乱则治，思所以亡则存（矛盾双方在一定条件下相互转化）</li><li>盲人摸象、坐井观天、管中窥豹（把部分当成整体）</li><li>贵上极则反贱，贱下极则反贵（矛盾双方在一定条件下相互转化）</li><li>绳锯木断，水滴石穿（量变引起质变）</li><li>失之东隅收之桑榆（矛盾对立统一）</li><li>蝉噪林喻静，鸟名山更幽（事物对立统一）</li><li>形存则神存，形谢则神灭（唯物主义）</li><li>竹外桃花三两枝，春江水暖鸭先知（联系）</li><li>种瓜得瓜种豆得豆，老鼠的后代会打洞（规律）</li><li>青山遮不住，毕竟东流去（事物变化发展）</li><li>斧斤以时入森林，材木不可胜用（尊重客观规律）</li><li>形者，有生之本（朴素唯物主义）</li><li>百感交集（意识的能动性）</li><li>三人成虎（量变引起质变）</li><li>真理之川从他的错误之沟渠中流过（矛盾双方相对立统一）</li><li>请君莫奏前朝曲，听唱新翻杨柳枝（事物变化发展）</li><li>抽刀断水水更流，举杯消愁愁更愁（规律的客观性）</li><li>长风破浪会有时，直挂云帆济闯海（前进性与曲折性的统一）</li><li>天地之变，寒暑风雨，水旱螟蝗，率皆有法（规律）</li><li>自古及今，法无不改，势无不积，事例无变迁，风气无不移易（事物的发展）</li><li>路遥知马力，日久见人心（（量的积累）</li><li>逝者如斯夫，不舍昼夜（事物永不停息地运动）</li><li>欲知山中事，需问打樵夫（实践是认识的基础）</li><li>读书破万卷，下笔如有神（量变的积累）</li><li>千淘万漉虽辛苦，吹尽狂沙始到金（事物发展前进性与曲折性的统一）</li><li>锲而不舍，金石可镂（重视量的积累）</li><li>读书百遍其义自见（量变引起质变）</li><li>乱花渐如迷人眼，浅草才能莫马蹄）</li><li>沉舟侧畔千帆过，病树前头万木春（发展）</li><li>近水楼台先得月，向阳花木易为春（联系）</li><li>芳林新叶催旧叶，流水前波让后波（新事物必然战胜旧事物）</li><li>山重水复疑无路，柳暗花明又一村（矛盾/ 前进性与曲折性的统一）</li><li>塞翁失马焉知非福（矛盾双方在一定条件下相互转化）</li><li>急湍之下，必有深潭；高丘之下，必有浚各（矛盾的普遍性）</li><li>喜怒哀乐之未发，谓之中；发而皆中节，谓之和；中也者，天下之大本也，和道之达道也，致中和，天地位焉，万物育焉。）</li><li>路漫漫其修远兮，吾将上下而求索（（发展的道理是曲折的，发挥主观能动性）</li><li>老吾老，以及人之老，幼吾幼，以及人之幼。（矛盾的普遍性与特殊性的统一）</li><li>各美其美，美人之美，美美与共，天下大同。（矛盾的对立性和同一性）</li><li>无边落木萧萧下，不尽长江滚滚来（新事物符合社会发展规律具有强大的生命力）</li><li>前人种树，后人乘凉（事物是发展的，要用发展的眼光看问题）</li><li>凡事预则立不预则废（发挥主观能动性）</li><li>失之毫厘谬以千里（真理的条件性）</li><li>守株待兔（将偶然联系当成必然联系）</li><li>皮之不存毛将焉附（联系）</li><li>邯郸学步，东施效颦（矛盾具有特殊性需要具体问题具体分析。）</li><li>巧妇难为无米之炊（一切从实际出发）</li><li>有意栽花花不开，无心插柳柳成荫（主观愿望与客观效果有时并不是一致的）</li><li>百足之虫死而不僵（旧事物任然强大，极力扼杀新事物）</li><li>南辕北辙（超越范围，路线不对，真理变缪误）</li><li>围魏救赵，唇亡齿寒，蝴蝶效应（联系）</li><li>谦受益，满招损（矛盾双方转化）</li><li>郑人买履（做事情要一切从实际出发）</li><li>削足适履（违反具体问题具体分析和一切从实际出发）</li><li>刻舟求剑（绝对静止）</li><li>冰冻三尺非一日之寒（量变是质变的必要准备，质变是量变的必然结果）</li><li><p>万丈高楼平地而起（量变是质变的必要准备）</p></li><li><p>不是一番寒彻骨，怎得梅花扑鼻香（发挥主观能动性/ 实现人生价值需要艰苦奋斗，顽强拼搏。）</p></li><li>防微杜渐（量变会引起质变）</li><li>白马非马也（混淆矛盾普遍性与特殊性的关系）</li><li>杀鸡儆猴（矛盾普遍性）</li><li>采得百花成蜜后，为谁辛苦为谁甜（人生的价值在于对社会的贡献）</li><li>不谋全局者，不足谋一域（整体处于统率地位，要立足整体。）</li><li>吃一堑，长一智（矛盾即对立统一，在一定条件下相互转化。）</li><li>揠苗助长；劈柴不照纹，累死劈柴人（违背客观规律，必将受到规律的惩罚。）</li><li>谋事在人，成事在天（ 把发挥主观能动性尊重客观规律科学地结合起来。）</li><li>田忌赛马—①事物在总体上的数量不变，只是由于构成事物的成分在结构和排列次序上发生变化也能引起质变；               ②当个部分以合理的结构形成整体时，整体的功能就大于各个部分功能之和）</li><li>近朱者赤，近墨者黑；南橘北枳；孟母三迁；名师出高徒（外因是事物变化发展的重要条件。）</li><li>十个指头按跳蚤；隔靴搔痒（没有抓住事物的主要矛盾，没有找到解决问题的关键。）</li><li>“坐地日行八万里，巡天遥看一千河。”（事物运动是永恒的，无条件的）</li><li>“兴亡由人事，山川空地形”（事物的发展变化是有规律的。）</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;嗯对是学习资料&lt;br&gt;
+    
+    </summary>
+    
+      <category term="School" scheme="https://arlxn.xyz/categories/School/"/>
+    
+      <category term="Politics" scheme="https://arlxn.xyz/categories/School/Politics/"/>
+    
+      <category term="Idiom" scheme="https://arlxn.xyz/categories/School/Politics/Idiom/"/>
+    
+    
+      <category term="Politics" scheme="https://arlxn.xyz/tags/Politics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word单侧装订</title>
+    <link href="https://arlxn.xyz/WordBookPrint.html"/>
+    <id>https://arlxn.xyz/WordBookPrint.html</id>
+    <published>2019-07-12T13:11:54.000Z</published>
+    <updated>2019-07-12T13:29:36.121Z</updated>
+    
+    <content type="html"><![CDATA[<p>以Word 2010为例，设置页面的单侧装订<br><a id="more"></a><br>首先，先打开一份待处理文档，可以看到，这篇文档边距设置的极小，在这份文档印刷完成之后，对于作者比较喜欢的抽杆夹，文档左面的一小部分会被压进抽杆夹里导致看不到，那么接下来就向大家演示如何完整的印刷文档又不会出现文字被压进抽杆夹的情况。<br><img src="https://img.vim-cn.com/8a/f595532fab8a0ad3c1d8941c936a9921f1fbe0.png" alt><br>图：打开文档<br>点击工具栏上的“页面布局”<br><img src="https://img.vim-cn.com/cd/cf130fa97ee41217bece7b9aa627ca6145dce2.png" alt><br>图：页面布局<br>点击右下角的“页面设置”（小的图标）<br><img src="https://img.vim-cn.com/71/0b8e362548d2c9dbefe6819a8a37ecc27dc7dc.png" alt><br>图：页面设置对话框<br>输入装订线大小，一般情况下文字距页面边距等于页边距+装订线。比如作者使用的是得力的一款抽杆夹，被压进去的大小大概有1.5cm，所以装订线大小这里就被设置为1cm.<br><img src="https://img.vim-cn.com/eb/be17f79e1ee5d8b35d0aad7fa1a8df33b6f829.png" alt><br>图：页面设置<br>然后点击“版式”，将“奇偶页不同”勾选上。<br><img src="https://img.vim-cn.com/d7/f5c3372850220bd168b9fafb4224bb8af7bda3.png" alt><br>图：“版式”<br><img src="https://img.vim-cn.com/ba/b8ad1b7312e78d8dd7ace7db7e0ec8d227d6eb.png" alt><br>可见现在已经是排版完成了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以Word 2010为例，设置页面的单侧装订&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Word" scheme="https://arlxn.xyz/tags/Word/"/>
+    
+      <category term="Office 2010" scheme="https://arlxn.xyz/tags/Office-2010/"/>
+    
+      <category term="排版" scheme="https://arlxn.xyz/tags/%E6%8E%92%E7%89%88/"/>
+    
+  </entry>
+  
+</feed>
